@@ -58,6 +58,8 @@ class LinkedList(object):
 
 a=LinkedList()
 a.insertStart(3)
-print(a.insertStart(4))
-print(a.size())
+a.insertStart(4)
+a.insertEnd(5)
+print(a.traverseList())
+a.size()
 
