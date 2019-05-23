@@ -56,6 +56,8 @@ class LinkedList(object):
             print("%d " % actualNode.data)
             actualNode = actualNode.nextNode
 
-
-
+a=LinkedList()
+a.insertStart(3)
+print(a.insertStart(4))
+print(a.size())
 
