@@ -27,6 +27,24 @@ class LinkedList(object):
             newNode.nextNode = self.head
             self.head = newNode
 
+    def remove(self):
+        if self.head is None:
+            return
+
+        self.size-=self.size
+
+        currentNode=self.head
+        previousNode=None
+
+        while currentNode.data != data:
+            previousNode=currentNode
+            currentNode=currentNode.nextNode
+
+        if previousNode is None:
+            self.head = currentNode.nextNode
+        else:
+            previousNode.nextNode=currentNode.nextNode
+
     # O(1)
     def size(self):
         return self.size
