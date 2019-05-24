@@ -27,11 +27,11 @@ class LinkedList(object):
             newNode.nextNode = self.head
             self.head = newNode
 
-    def remove(self):
+    def remove(self,data):
         if self.head is None:
             return
 
-        self.size-=self.size
+        self.size-=1
 
         currentNode=self.head
         previousNode=None
@@ -46,7 +46,7 @@ class LinkedList(object):
             previousNode.nextNode=currentNode.nextNode
 
     # O(1)
-    def size(self):
+    def size1(self):
         return self.size
 
     # O(N)
@@ -78,6 +78,10 @@ a=LinkedList()
 a.insertStart(3)
 a.insertStart(4)
 a.insertEnd(5)
+
+#a.remove(3)
+#a.remove(4)
+a.remove(5)
 print(a.traverseList())
-a.size()
+print(a.size1())
 
