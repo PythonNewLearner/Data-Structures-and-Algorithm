@@ -50,11 +50,23 @@ class BinarySearchTree(object):
             self.traverseInOrder(self.root)
 
     def traverseInOrder(self,node):
-
         if node.leftChild:
-            self.traverseInOrder((node.leftChild))
+            self.traverseInOrder(node.leftChild)
 
         print('%s'%node.data)
 
         if node.rightChild:
             self.traverseInOrder(node.rightChild)
+#testing
+bst=BinarySearchTree()
+bst.insert(10)
+bst.insert(5)
+bst.insert(4)
+bst.insert(15)
+bst.insert(6)
+
+print('Max',bst.getMaxValue())
+print('Min',bst.getMinValue())
+print('In Order Traverse', bst.traverse())
+
+
